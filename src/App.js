@@ -25,7 +25,13 @@ function App() {
   const [op, setOp] = useState("x");
 
   useEffect(() => {
-    let res;
+    // fallback to empty value for C
+    let res = [
+      [[], [], []],
+      [[], [], []],
+      [[], [], []],
+    ];
+
     try {
       const mapNumber = (m) => m.map((r) => r.map((x) => Number(x)));
       let _a = mapNumber(a);
