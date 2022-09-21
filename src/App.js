@@ -27,15 +27,19 @@ function App() {
   useEffect(() => {
     let res;
     try {
+      const mapNumber = (m) => m.map((r) => r.map((x) => Number(x)));
+      let _a = mapNumber(a);
+      let _b = mapNumber(b);
+
       switch (op) {
         case "+":
-          res = addMatrix(a, b);
+          res = addMatrix(_a, _b);
           break;
         case "-":
-          res = subtractMatrix(a, b);
+          res = subtractMatrix(_a, _b);
           break;
         case "x":
-          res = multiplyMatrix(a, b);
+          res = multiplyMatrix(_a, _b);
           break;
         default:
           return;
