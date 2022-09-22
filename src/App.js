@@ -51,6 +51,7 @@ function App() {
           return;
       }
     } catch {}
+
     setC(res);
   }, [a, b, op]);
 
