@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { useEffect, useState } from "react";
 import { addMatrix, multiplyMatrix, subtractMatrix } from "./calculate";
 import Matrix from "./Matrix";

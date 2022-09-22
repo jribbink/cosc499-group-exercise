@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import _ from "lodash";
-
 function Matrix({ value: matrix, onChange = () => {}, readOnly }) {
   function handleMatrixChange(i, j, v) {
     if (matrix[i][j] !== v) {
