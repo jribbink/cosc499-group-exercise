@@ -103,6 +103,6 @@ describe("Matrix tests", () => {
         expect(multResult[i][j]).toEqual(mult1[i][j]);
       }
     }
-  })
+  });
 
 });
