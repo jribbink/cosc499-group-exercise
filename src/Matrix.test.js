@@ -67,7 +67,7 @@ describe("Matrix tests", () => {
     expect(newValue[i][j]).toEqual(v);
   });
 
-  test("addition of values", async() => {
+  test("addition of values", async () => {
     let add1 = [
       [1, 2, 3],
       [4, 5, 6],
@@ -78,31 +78,11 @@ describe("Matrix tests", () => {
       [6, 5, 4],
       [3, 2, 1],
     ];
-    let add3 = addMatrix(add1,add2);
-    for(let i = 0; i < 3; i++){
-      for(let j = 0; j < 3; j++){
+    let add3 = addMatrix(add1, add2);
+    for (let i = 0; i < 3; i++) {
+      for (let j = 0; j < 3; j++) {
         expect(add3[i][j]).toEqual(10);
       }
     }
   });
-
-  test("subtraction of values", async() => {
-    let sub1 = [
-      [10, 14, 10],
-      [11, 12, 14],
-      [15, 16, 17],
-    ];
-    let sub2 = [
-      [0, 4, 0],
-      [1, 2, 4],
-      [5, 6, 7],
-    ];
-    let sub3 = subtractMatrix(sub1,sub2);
-    for(let i = 0; i < 3; i++){
-      for(let j = 0; j < 3; j++){
-        expect(sub3[i][j]).toEqual(10);
-      }
-    }
-  });
-
 });
