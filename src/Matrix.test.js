@@ -4,6 +4,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { act, fireEvent } from "@testing-library/react";
+import { Matrix } from "./Matrix"
 
 describe("Matrix tests", () => {
   let container, root;
