@@ -19,6 +19,9 @@ Change the notation to addition (+), The result will be outputted next to the eq
 ### Matrix Subtraction
 Change the notation to subtraction (-), The result will be outputted next to the equal sign (=) in a matrix format.
 
+### Matrix Multiplication
+Change the notation to multiplication (x). The resulting matrix will be shown on the right of the equals sign (=).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

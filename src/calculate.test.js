@@ -2,8 +2,7 @@
 /* eslint-disable testing-library/no-unnecessary-act */
 /* eslint-disable testing-library/no-node-access */
 import { createRoot } from "react-dom/client";
-import { addMatrix } from "./calculate";
-import { subtractMatrix } from "./calculate";
+import { addMatrix, subtractMatrix, multiplyMatrix } from "./calculate";
 
 describe("Calculate tests", () => {
   let container, root;
@@ -46,6 +45,26 @@ describe("Calculate tests", () => {
     for(let i = 0; i < 3; i++){
       for(let j = 0; j < 3; j++){
         expect(sub3[i][j]).toEqual(10);
+      }
+    }
+  });
+
+  test("multiplication of values",async() => {
+    // just test by the identity matrix, it's probably fine
+    let mult1 = [
+      [4,3,8],
+      [9,5,1],
+      [2,7,6]
+    ];
+    let mult2 = [
+      [1,0,0],
+      [0,1,0],
+      [0,0,1]
+    ];
+    let multResult = multiplyMatrix(mult1,mult2);
+    for(let i = 0; i < 3; i++){
+      for(let j = 0; j < 3; j++){
+        expect(multResult[i][j]).toEqual(mult1[i][j]);
       }
     }
   });
