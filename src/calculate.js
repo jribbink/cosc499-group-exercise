@@ -19,5 +19,17 @@ export function subtractMatrix(a, b) {
 }
 
 export function multiplyMatrix(a, b) {
-  return null;
+  if (a[0].length !== b.length) {
+    throw new Error("Matrices cannot be multiplied");
+  }
+
+  let c = [];
+  for (let i = 0; i < a.length; i++) {
+    let r = [];
+    for (let j = 0; j < b[0].length; j++) {
+      r.push(a[i].reduce((s, v, k) => s + v * b[k][j], 0));
+    }
+    c.push(r);
+  }
+  return c;
 }
