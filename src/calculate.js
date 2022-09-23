@@ -15,7 +15,7 @@ export function addMatrix(a, b) {
 }
 
 export function subtractMatrix(a, b) {
-  return null;
+  return addMatrix(a,b.map((r) => r.map((v) => -v)));
 }
 
 export function multiplyMatrix(a, b) {
